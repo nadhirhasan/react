@@ -1,22 +1,23 @@
-import './App.css';
-import { BrowserRouter as Router ,Switch ,Route } from 'react-router-dom';
-import Navbar from './Navbar/navbar';
-import Card from './1stcard/card';
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes as Switch,
+} from "react-router-dom";
+import Navbar from "./Navbar/navbar";
+import Card from "./1stcard/card";
 
-
-function App() {
+const App = () => {
   return (
     <div>
       <Router>
-        <Navbar/>
+        <Navbar />
         <Switch>
-          <Route path = "/" exact = {true}>
-            {Card}
-          </Route>
+          <Route path="/" exact caseSensitive element={<Card />} />
         </Switch>
       </Router>
     </div>
   );
-}
+};
 
 export default App;
