@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../constants";
-import image from "./image.png";
-import { ReactComponent as RightChevron } from "../assets/icons/right-chevron-orange.icon.svg";
+import { theme } from "../../constants";
+import { ReactComponent as RightChevron } from "../../assets/icons/right-chevron-orange.icon.svg";
 
 const Swrapper = styled.div`
   display: flex;
@@ -30,17 +29,21 @@ const SOffText = styled.li`
   font-weight: 700;
 `;
 
-const CategoryCard = (props) => {
+type Props = {
+  title: string;
+  discount?: number;
+  image: string;
+};
+
+export const CategoryCard: React.FC<Props> = ({ discount, title, image }) => {
   return (
     <Swrapper>
-      <SImage src={props.image || image} alt="category-image" />
+      <SImage src={image} alt="category-image" />
       <SUl>
-        <SOffText>70% OFF</SOffText>
-        <li style={{ fontWeight: "bold" }}>{props.title}</li>
+        {discount ? <SOffText>{discount}% OFF</SOffText> : null}
+        <li style={{ fontWeight: "bold" }}>{title}</li>
       </SUl>
       <RightChevron />
     </Swrapper>
   );
 };
-
-export default CategoryCard;

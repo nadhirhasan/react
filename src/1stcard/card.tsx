@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { CategoriesHomeSection } from "../organisms/categories/categories-home-section.component";
 import classes from "./card.module.css";
 import CategoryCard from "./category-card.component";
 import image from "./image.png";
@@ -40,14 +41,7 @@ const categories = [
 function Card() {
   return (
     <SWrapper>
-      <div>
-        <h1>Shop by catergory</h1>
-        <SCategoryWrapper>
-          {categories.map(({ title, image }) => (
-            <CategoryCard title={title} image={image} />
-          ))}
-        </SCategoryWrapper>
-      </div>
+      <CategoriesHomeSection />
       <h1 className={classes.head}>Blockbuster offers!</h1>
       <section className={classes.card2_continer}>
         <div className={classes.card2}>
