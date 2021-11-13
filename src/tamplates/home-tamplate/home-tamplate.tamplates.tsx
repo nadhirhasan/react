@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { BlockBusterHomeSection } from "../../organisms/blockbuster-categories/blockbuster-categories-home-section";
-import { CategoriesHomeSection } from "../../organisms/categories/categories-home-section.component";
-import { Navbar } from "../../molecules/navbar/navbar.component"
+import styled from 'styled-components';
+import { BlockBusterHomeSection } from '../../organisms/blockbuster-categories/home-blockbuster-section';
+import { CategoriesHomeSection } from '../../organisms/categories/categories-home-section.component';
+import { Navbar } from '../../molecules/navbar/navbar.component';
 const SWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,21 +9,18 @@ const SWrapper = styled.div`
   justify-content: center;
 `;
 
-
-
-
-
 function HomeTamplate() {
   return (
     <>
-    <Navbar/>
-    <SWrapper>
-      <CategoriesHomeSection />
-    </SWrapper>
-    <SWrapper>
+      <Navbar />
+      <SWrapper>
+        <CategoriesHomeSection />
+      </SWrapper>
+      <SWrapper>
         <BlockBusterHomeSection />
-    </SWrapper></>
+      </SWrapper>
+    </>
   );
 }
 
-export default HomeTamplate
+export default HomeTamplate;

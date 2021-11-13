@@ -1,1 +1,1 @@
-export * from "./blockbuster-categories-home-section"
+export * from './home-blockbuster-section';

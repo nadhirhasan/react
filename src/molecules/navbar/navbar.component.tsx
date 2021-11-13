@@ -1,41 +1,34 @@
 import searchIcon from './search_icon.png';
 import styled from 'styled-components';
+import { theme } from '../../constants';
+import { Text } from '../../atoms/';
 
-const SHeader = styled.header`
+const SVertical = styled.div`
+  width: 0.5px;
+  background-color: ${theme.lightGray};
+  height: 100%;
+`;
+
+const SWrapper = styled.header`
+  padding: 16px;
   display: flex;
-  align-items: baseline;
+  flex: 1;
   background-color: rgba(0, 0, 0, 0.55);
-  height: 76px;
-  margin: 0;
   align-items: center;
 `;
 
-const SLogo = styled.h1`
-  margin-left: 34px;
-  margin-top: 20px;
-  color: whitesmoke;
-  font-weight: 700;
-  font-size: 50px;
-`;
-
-const SWrapper = styled.div`
-  width: 50%;
-  margin: 0px 0px 0px 200px;
-  padding: 0;
-`;
-
 const SSearch = styled.div`
-  width: 100%;
   display: flex;
+  flex: 1;
+  justify-content: center;
 `;
 
 const SSearchTerm = styled.input`
-  width: 100%;
   border: none;
-  height: 46px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  padding: 20px;
+  padding: 16px;
+  width: 100%;
 `;
 
 const SSearchButton = styled.button`
@@ -44,6 +37,7 @@ const SSearchButton = styled.button`
   background: rgba(222, 224, 224, 1);
   text-align: center;
   color: #fff;
+  padding: 16px;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
@@ -53,18 +47,18 @@ const SIcon = styled.img`
   width: 100%;
 `;
 
-export function Navbar() {
+export const Navbar = () => {
   return (
-    <SHeader>
-      <SLogo>Ceyello</SLogo>
-      <SWrapper>
-        <SSearch>
-          <SSearchTerm type="text" placeholder="Search for products" />
-          <SSearchButton type="submit">
-            <SIcon src={searchIcon} alt="icon" />
-          </SSearchButton>
-        </SSearch>
-      </SWrapper>
-    </SHeader>
+    <SWrapper>
+      <Text.Heading color="white" fontWeight="bold" fontSize="56px" mr="24px">
+        Ceyello
+      </Text.Heading>
+      <SSearch>
+        <SSearchTerm type="text" placeholder="Search for products" />
+        <SSearchButton type="submit">
+          <SIcon src={searchIcon} alt="icon" />
+        </SSearchButton>
+      </SSearch>
+    </SWrapper>
   );
-}
+};

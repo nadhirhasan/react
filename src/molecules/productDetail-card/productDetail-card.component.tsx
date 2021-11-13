@@ -4,8 +4,8 @@ import { theme } from '../../constants';
 const SWrapper = styled.div`
   width: 350px;
   position: relative;
-  margin-top:50px;
-  margin-left:44px;
+  margin-top: 50px;
+  margin-left: 44px;
 `;
 
 const SOffTag = styled.p`
