@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { CategoryCard } from "../../molecules/category-card/category-card.component";
-import { theme } from "../../constants";
+import styled from 'styled-components';
+import { CategoryCard } from '../../molecules/category-card/category-card.component';
+import { theme } from '../../constants';
 
 const SCategoryWrapper = styled.div`
   display: grid;
@@ -10,34 +10,34 @@ const SCategoryWrapper = styled.div`
 
 const categories = [
   {
-    title: "Electronics and Electricals",
+    title: 'Electronics and Electricals',
     discount: 70,
-    image: theme.electronicsImage
+    image: theme.electronicsImage,
   },
   {
-    title: "Electronics and Electricals",
+    title: 'Electronics and Electricals',
     discount: 70,
-    image:theme.electronicsImage
+    image: theme.electronicsImage,
   },
   {
-    title: "Electronics and Electricals",
+    title: 'Electronics and Electricals',
     discount: 70,
-    image:theme.electronicsImage
+    image: theme.electronicsImage,
   },
   {
-    title: "Electronics and Electricals",
+    title: 'Electronics and Electricals',
     discount: 70,
-    image:theme.electronicsImage
+    image: theme.electronicsImage,
   },
   {
-    title: "Electronics and Electricals",
+    title: 'Electronics and Electricals',
     discount: 70,
-    image:theme.electronicsImage
+    image: theme.electronicsImage,
   },
   {
-    title: "Electronics and Electricals",
+    title: 'Electronics and Electricals',
     discount: 70,
-    image:theme.electronicsImage
+    image: theme.electronicsImage,
   },
 ];
 
@@ -47,7 +47,7 @@ export const CategoriesHomeSection = () => {
       <h1>Shop by catergory</h1>
       <SCategoryWrapper>
         {categories.map(({ title, image, discount }) => (
-          <CategoryCard title={title} image={image || ""} discount={discount} />
+          <CategoryCard title={title} image={image || ''} discount={discount} />
         ))}
       </SCategoryWrapper>
     </div>
