@@ -5,15 +5,12 @@ import { theme } from '../../constants';
 const SBlockWrapper = styled.section`
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-gap: 36px;
-  
+  grid-gap: 16px;
 `;
 
 const SH1 = styled.h1`
-margin-left:0px;
-`
-
-
+  margin-left: 0px;
+`;
 
 const Categories = [
   {

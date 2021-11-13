@@ -1,3 +1,4 @@
+import { Text } from '../../atoms';
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../constants';
@@ -16,16 +17,16 @@ const SWrapper = styled.div`
   padding: 16px;
 `;
 
-const SOffTag = styled.span`
-  background-color: green;
+const SOffer = styled(Text.BodyBold)`
   border-radius: 0px 8px 0px 8px;
-  width: 67px;
-  color: white;
   font-weight: 600;
+  background-color: ${theme.greenColor};
   padding: 8px;
+  width: max-content;
+  color: white;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  top: 0;
+  right: 0;
 `;
 
 const SImage = styled.img`
@@ -84,12 +85,12 @@ export const BlockBusterCard: React.FC<Props> = ({
 }) => {
   return (
     <SWrapper>
-      <SOffTag>{offer}% OFF</SOffTag>
+      <SOffer>{offer}% OFF</SOffer>
 
       <SImage src={image} alt="block buster"></SImage>
 
       <STextWrapper>
-        <SDis>Rs.{discount}</SDis>
+        <Text.Body>Rs.{discount}</Text.Body>
         <SPrice>Rs.{price}</SPrice>
         <SName>{name}</SName>
       </STextWrapper>

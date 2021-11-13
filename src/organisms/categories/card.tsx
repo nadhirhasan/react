@@ -1,9 +1,7 @@
-import styled from "styled-components";
-import { CategoriesHomeSection } from "../organisms/categories/categories-home-section.component";
-import classes from "./card.module.css";
-import CategoryCard from "./category-card.component";
-import image from "./image.png";
-import oven from "./microwave.png";
+import styled from 'styled-components';
+import { CategoriesHomeSection } from './categories-home-section.component';
+import classes from './card.module.css';
+import oven from './microwave.png';
 
 const SWrapper = styled.div`
   display: flex;
@@ -11,32 +9,6 @@ const SWrapper = styled.div`
   align-items: center;
   justify-content: center;
 `;
-
-const SCategoryWrapper = styled.div`
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 16px;
-`;
-
-const categories = [
-  {
-    title: "Electricals",
-  },
-  {
-    title: "Electronics",
-  },
-  {
-    title: "Grocery",
-    image:
-      "https://st.depositphotos.com/1063437/2337/i/950/depositphotos_23373292-stock-photo-groceries-in-wicker-basket-including.jpg",
-  },
-  {
-    title: "Cosmetics",
-  },
-  {
-    title: "Baby",
-  },
-];
 
 function Card() {
   return (

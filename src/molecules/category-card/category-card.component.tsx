@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../constants';
 import { ReactComponent as RightChevron } from '../../assets/icons/right-chevron-orange.icon.svg';
+import { Text } from '../../atoms';
 
 const Swrapper = styled.div`
   display: flex;
@@ -18,15 +19,11 @@ const Swrapper = styled.div`
 const SImage = styled.img`
   width: 130px;
   height: 83px;
+  margin-right: 16px;
 `;
 
-const SUl = styled.ul`
-  list-style: none;
-`;
-
-const SOffText = styled.li`
-  color: ${theme.greenColor};
-  font-weight: 700;
+const STextWrapper = styled.div`
+  margin-right: 24px;
 `;
 
 type Props = {
@@ -39,10 +36,16 @@ export const CategoryCard: React.FC<Props> = ({ discount, title, image }) => {
   return (
     <Swrapper>
       <SImage src={image} alt="category-image" />
-      <SUl>
-        {discount ? <SOffText>{discount}% OFF</SOffText> : null}
-        <li style={{ fontWeight: 'bold' }}>{title}</li>
-      </SUl>
+      <STextWrapper>
+        {discount ? (
+          <Text.BodyBold color={theme.greenColor}>
+            {discount}% OFF
+          </Text.BodyBold>
+        ) : null}
+        <Text.Body mt="8px" fontWeight="600">
+          {title}
+        </Text.Body>
+      </STextWrapper>
       <RightChevron />
     </Swrapper>
   );
