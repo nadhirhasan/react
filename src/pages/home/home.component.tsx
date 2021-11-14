@@ -9,7 +9,7 @@ const SWrapper = styled.div`
   justify-content: center;
 `;
 
-function HomeTamplate() {
+function Home() {
   return (
     <>
       <Navbar />
@@ -23,4 +23,4 @@ function HomeTamplate() {
   );
 }
 
-export default HomeTamplate;
+export default Home;
