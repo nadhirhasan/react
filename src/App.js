@@ -1,21 +1,29 @@
-import './App.css';
 import {
   BrowserRouter as Router,
   Route,
   Routes as Switch,
 } from 'react-router-dom';
-import HomeTamplate from './tamplates/home-tamplate/home-tamplate.tamplates';
-import { ProductDetailTamplate } from './tamplates/product-detail-tamplate';
-import { ElectronicsProducts } from './tamplates/electronics-products-tamplate/electronics-products-tamplate.tamplates';
+import './App.css';
+import { ProductList, ProductDetails } from './pages';
+import Home from './pages/home/home.component';
+import React from 'react';
 
 const App = () => {
   return (
     <div>
       <Router>
         <Switch>
-          <Route path="/" exact caseSensitive element={<HomeTamplate />} />
-          <Route path="product-detail" caseSensitive element={<ProductDetailTamplate />} />
-          <Route path="electronics-products" caseSensitive element={<ElectronicsProducts />} />
+          <Route path="/" exact caseSensitive element={<Home />} />
+          <Route
+            path="products/:id"
+            caseSensitive
+            element={<ProductDetails />}
+          />
+          <Route
+            path="categories/:id"
+            caseSensitive
+            element={<ProductList />}
+          />
         </Switch>
       </Router>
     </div>

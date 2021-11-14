@@ -1,3 +1,4 @@
+import { Text } from '@src/atoms';
 import styled from 'styled-components';
 import { theme } from '../../constants';
 
@@ -8,35 +9,9 @@ const SWrapper = styled.div`
   margin-left: 44px;
 `;
 
-const SOffTag = styled.p`
-  background: green;
-  width: 70px;
-  height: 25px;
-  color: white;
-  border-radius: 7px;
-  text-align: center;
-  padding: 4px;
-`;
-
-const SName = styled.div`
-  font-weight: 600;
-  font-size: 28px;
-  margin-bottom: 20px;
-`;
-
-const SDis = styled.div`
-  text-decoration: line-through;
-  font-weight: 400;
-`;
-
-const SPrice = styled.div`
-  font-size: 35px;
-  font-weight: 800;
-  margin-bottom: 16px;
-`;
-
-const SText = styled.div`
-  font-weight: 400;
+const SOffer = styled(Text.BodyBold)`
+  width: max-content;
+  border-radius: 8px;
 `;
 
 const SColorWrapper = styled.div`
@@ -89,46 +64,24 @@ const SImageWrapper = styled.div`
 `;
 
 const SLabelWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content; left;
+  grid-gap: 8px;
+  margin-top : 16px
 `;
 
-const SSmallLabel = styled.p`
-  background: rgba(233, 97, 37, 0.1);
-  font-weight: 600;
-  width: 60px;
-  height: 20px;
-  color: black;
-  border-radius: 5px;
-  text-align: center;
-  padding: 3px 6px;
-  margin-right: 16px;
-  cursor: pointer;
-`;
+type LabelProps = {
+  selected?: boolean;
+};
 
-const SLargeLabel = styled.p`
-  background: rgb(233, 97, 37);
-  font-weight: 600;
-  width: 60px;
-  height: 20px;
-  color: white;
-  border-radius: 5px;
+const SLabel = styled(Text.BodyBold)<LabelProps>`
+  ${(props) => (props.selected ? 'color : white;' : '')}
+  border-radius: 8px;
+  background-color: ${(props) =>
+    props.selected ? theme.mainColor : `${theme.mainColor}10`};
   text-align: center;
-  padding: 3px 6px;
-  margin-right: 16px;
-  cursor: pointer;
-`;
-
-const SMediumLabel = styled.p`
-  background: rgba(233, 97, 37, 0.1);
-  font-weight: 600;
-  width: 60px;
-  height: 20px;
-  color: black;
-  border-radius: 5px;
-  text-align: center;
-  padding: 3px 6px;
-  border: 1px solid black;
-  margin-right: 16px;
+  padding: 8px;
   cursor: pointer;
 `;
 
@@ -146,36 +99,36 @@ const SButton = styled.button`
   cursor: pointer;
 `;
 
-export function ProductDetailCard() {
+export const ProductDetailContent = () => {
   return (
     <SWrapper>
-      <SOffTag>10% OFF</SOffTag>
-      <SName>Microwave oven</SName>
-      <SDis>Rs.10500</SDis>
-      <SPrice>Rs.10,000</SPrice>
-      <SText>Color</SText>
+      <SOffer color="white" p="8px" backgroundColor={theme.greenColor}>
+        10% OFF
+      </SOffer>
+      <Text.Heading mt="8px">Microwave oven</Text.Heading>
+      <Text.BodyLineThrough mt="16px">Rs.10500</Text.BodyLineThrough>
+      <Text.Heading mt="8px">Rs.10,000</Text.Heading>
+      <Text.Body mt="24px">Color</Text.Body>
       <SColorWrapper>
         <SMaroonColorCircle />
         <SLightBlueColorCircle />
         <SBlueColorCircle />
         <SRoseColorCircle />
       </SColorWrapper>
-      <SText>Image</SText>
+      <Text.Body mt="16px">Image</Text.Body>
       <SImageWrapper>
         <SMiniImage src={theme.ovenImage} />
         <SMiniImage src={theme.ovenImage} />
         <SMiniImage src={theme.ovenImage} />
         <SMiniImage src={theme.ovenImage} />
       </SImageWrapper>
-      <SText>Label</SText>
+      <Text.Body mt="16px">Label</Text.Body>
       <SLabelWrapper>
-        <SSmallLabel>Small</SSmallLabel>
-
-        <SLargeLabel>Large</SLargeLabel>
-
-        <SMediumLabel>Medium</SMediumLabel>
+        <SLabel selected>Small</SLabel>
+        <SLabel>Medium</SLabel>
+        <SLabel>Large</SLabel>
       </SLabelWrapper>
       <SButton>Contact us</SButton>
     </SWrapper>
   );
-}
+};

@@ -2,7 +2,9 @@ const mainColor = '#E96125';
 const greenColor = 'green';
 const lightGray = '#E2E2E2';
 const ovenImage = 'https://damro.lk/wp-content/uploads/2020/08/IEOV05-32.jpg';
-const electronicsImage = 'https://www.pngall.com/wp-content/uploads/1/Electronic.png';
+const electronicsImage =
+  'https://www.pngall.com/wp-content/uploads/1/Electronic.png';
+const grayColor = '#6D6D6D';
 
 export const theme = {
   mainColor,
@@ -10,5 +12,5 @@ export const theme = {
   lightGray,
   ovenImage,
   electronicsImage,
+  grayColor,
 };
-
