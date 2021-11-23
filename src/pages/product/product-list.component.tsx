@@ -1,7 +1,8 @@
-import { MiniBlockBuster } from '../../organisms/mini-blockbuster-categories/mini-blockbuster-catergories';
+import { ProductlistContent } from '../../organisms';
 import styled from 'styled-components';
-import { ProductList as ProductsWrapper } from '../../molecules/products-list/products-list.component';
+import { CategoriesSidebar } from '../../molecules';
 import { Navbar } from '../../molecules/navbar/navbar.component';
+import { useNavigate, useParams } from 'react-router';
 const SWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -9,13 +10,18 @@ const SWrapper = styled.div`
 `;
 
 export const ProductList = () => {
+  const navigate = useNavigate();
+
+  const { id } = useParams();
+
+  if (!id) {
+    navigate('/');
+    return null;
+  }
   return (
-    <>
-      <Navbar />
-      <SWrapper>
-        <ProductsWrapper />
-        <MiniBlockBuster />
-      </SWrapper>
-    </>
+    <SWrapper>
+      <CategoriesSidebar />
+      <ProductlistContent />
+    </SWrapper>
   );
 };

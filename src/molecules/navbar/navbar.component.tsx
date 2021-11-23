@@ -1,26 +1,27 @@
 import searchIcon from './search_icon.png';
 import styled from 'styled-components';
-import { theme } from '../../constants';
 import { Text } from '../../atoms/';
-
-const SVertical = styled.div`
-  width: 0.5px;
-  background-color: ${theme.lightGray};
-  height: 100%;
-`;
+import { theme } from '@src/constants';
 
 const SWrapper = styled.header`
   padding: 16px;
-  display: flex;
-  flex: 1;
-  background-color: rgba(0, 0, 0, 0.55);
+  display: grid;
+  background-color: ${theme.grayColor};
+  grid-auto-flow: column;
+  justify-content: left;
+  grid-gap: 16px;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
 `;
 
 const SSearch = styled.div`
   display: flex;
-  flex: 1;
   justify-content: center;
+  width: 75vw;
 `;
 
 const SSearchTerm = styled.input`

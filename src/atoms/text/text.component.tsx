@@ -81,6 +81,7 @@ const SmallHeading = styled.h4<Props>`
 `;
 
 const TextGray = styled.p<Props>`
+  margin: 0;
   color: rgb(162, 166, 163);
   font-weight: 400px;
   font-size: 15px;
@@ -88,21 +89,6 @@ const TextGray = styled.p<Props>`
   ${color};
   ${typography}
 `;
-
-const Button = styled.button<Props>`
-  width: 100%;
-  background-color: rgb(241, 87, 31);
-  border: none;
-  cursor: pointer;
-  color: white;
-  border-radius: 10px;
-  ${space};
-  ${color};
-  ${typography};
-`;
-
-
-
 
 export const Text = {
   Primary,
@@ -113,5 +99,4 @@ export const Text = {
   Secondary,
   BodyLineThrough,
   TextGray,
-  Button,
 };

@@ -3,17 +3,22 @@ import {
   Route,
   Routes as Switch,
 } from 'react-router-dom';
-import './App.css';
+import styled from 'styled-components';
+import { Navbar } from './molecules';
 import { ProductList, ProductDetails } from './pages';
-import Home from './pages/home/home.component';
-import React from 'react';
+import { Home } from './pages';
 
-const App = () => {
+const SContent = styled.div`
+  margin-top: 108px;
+`;
+
+export const App = () => {
   return (
-    <div>
-      <Router>
+    <Router>
+      <Navbar />
+      <SContent>
         <Switch>
-          <Route path="/" exact caseSensitive element={<Home />} />
+          <Route path="/" caseSensitive element={<Home />} />
           <Route
             path="products/:id"
             caseSensitive
@@ -25,9 +30,7 @@ const App = () => {
             element={<ProductList />}
           />
         </Switch>
-      </Router>
-    </div>
+      </SContent>
+    </Router>
   );
 };
-
-export default App;
