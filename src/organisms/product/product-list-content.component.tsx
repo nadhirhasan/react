@@ -1,33 +1,19 @@
 import styled from 'styled-components';
-import { BlockBusterCard } from '../../molecules';
+import { ProductCard, getCategoryById } from '../../molecules';
 import { theme } from '../../constants';
 import { Text } from '@src/atoms';
+import { useParams } from 'react-router';
 
+const SWrapper = styled.div``;
 
-const SWrapper = styled.div`
-  
-`
-
-const SBlockWrapper = styled.section`
+const SProductsWrapper = styled.section`
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 24px;
-  
+  margin-top: 32px;
 `;
 
-const SH1 = styled.div`
-  margin-left: 0px;
-  font-size: 38px;
-  font-weight: 700;
-
-`;
-
-const SLighGrayText = styled.div`
-  color: rgb(158, 157, 157);
-  font-size: 14px;
-`;
-
-const Categories = [
+const products = [
   {
     offer: 10,
     discount: 10500,
@@ -102,16 +88,18 @@ const Categories = [
   },
 ];
 
-export const MiniBlockBuster = () => {
+export const ProductlistContent = () => {
+  const { id } = useParams();
+
+  const category = getCategoryById(id);
+
   return (
-    <div>
-      <SH1>Electronics</SH1>
-      <Text.TextGray>24 products</Text.TextGray>
-      <SWrapper>
-        
-      <SBlockWrapper>
-        {Categories.map(({ offer, discount, image, price, name, btn_name }) => (
-          <BlockBusterCard
+    <SWrapper>
+      <Text.Heading>{category?.title}</Text.Heading>
+      <Text.TextGray mt="8px">24 products</Text.TextGray>
+      <SProductsWrapper>
+        {products.map(({ offer, discount, image, price, name, btn_name }) => (
+          <ProductCard
             offer={offer}
             discount={discount}
             image={image}
@@ -120,8 +108,7 @@ export const MiniBlockBuster = () => {
             btn_name={btn_name}
           />
         ))}
-      </SBlockWrapper>
-      </SWrapper>
-    </div>
+      </SProductsWrapper>
+    </SWrapper>
   );
 };

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import { theme } from '../../constants';
 import { ReactComponent as RightChevron } from '../../assets/icons/right-chevron-orange.icon.svg';
 import { Text } from '../../atoms';
+import { useNavigate } from 'react-router';
 
 const Swrapper = styled.div`
   display: flex;
@@ -27,14 +28,26 @@ const STextWrapper = styled.div`
 `;
 
 type Props = {
+  id: string;
   title: string;
   discount?: number;
   image: any;
 };
 
-export const CategoryCard: React.FC<Props> = ({ discount, title, image }) => {
+export const CategoryCard: React.FC<Props> = ({
+  id,
+  discount,
+  title,
+  image,
+}) => {
+  const navigate = useNavigate();
+
+  const onClickHandler = useCallback(() => {
+    navigate('/categories/' + id);
+  }, []);
+
   return (
-    <Swrapper>
+    <Swrapper onClick={onClickHandler}>
       <SImage src={image} alt="category-image" />
       <STextWrapper>
         {discount ? (

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BlockBusterCard } from '../../molecules/blockbuster-card/blockbuster-card.component';
+import { ProductCard } from '../../molecules';
 import { theme } from '../../constants';
 
 const SBlockWrapper = styled.section`
@@ -12,7 +12,7 @@ const SH1 = styled.h1`
   margin-left: 0px;
 `;
 
-const Categories = [
+const categories = [
   {
     offer: 10,
     discount: 10500,
@@ -47,13 +47,13 @@ const Categories = [
   },
 ];
 
-export const BlockBusterHomeSection = () => {
+export const HomeProductsSlider = () => {
   return (
     <div>
       <SH1>Blockbuster offers!</SH1>
       <SBlockWrapper>
-        {Categories.map(({ offer, discount, image, price, name, btn_name }) => (
-          <BlockBusterCard
+        {categories.map(({ offer, discount, image, price, name, btn_name }) => (
+          <ProductCard
             offer={offer}
             discount={discount}
             image={image}

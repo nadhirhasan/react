@@ -14,7 +14,6 @@ const SLeft = styled.div``;
 export const ProductDetails = () => {
   return (
     <div>
-      <Navbar />
       <SWrapper>
         <SLeft>
           <ProductImageCarousal />

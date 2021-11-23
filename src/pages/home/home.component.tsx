@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { BlockBusterHomeSection } from '../../organisms/blockbuster-categories/home-blockbuster-section';
-import { CategoriesHomeSection } from '../../organisms/categories/categories-home-section.component';
-import { Navbar } from '../../molecules/navbar/navbar.component';
+import { HomeProductsSlider } from '../../organisms';
+import { HomeCategoriesSection } from '../../organisms/home/home-categories-section.component';
 const SWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,18 +8,15 @@ const SWrapper = styled.div`
   justify-content: center;
 `;
 
-function Home() {
+export const Home = () => {
   return (
     <>
-      <Navbar />
       <SWrapper>
-        <CategoriesHomeSection />
+        <HomeCategoriesSection />
       </SWrapper>
       <SWrapper>
-        <BlockBusterHomeSection />
+        <HomeProductsSlider />
       </SWrapper>
     </>
   );
-}
-
-export default Home;
+};
