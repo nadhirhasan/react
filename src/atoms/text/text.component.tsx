@@ -17,7 +17,7 @@ const Primary = styled.p<Props>`
   line-height: 1rem;
   ${space};
   ${color};
-  ${typography}
+  ${typography};
 `;
 
 const Secondary = styled.p<Props>`
@@ -80,6 +80,30 @@ const SmallHeading = styled.h4<Props>`
   ${typography}
 `;
 
+const TextGray = styled.p<Props>`
+  color: rgb(162, 166, 163);
+  font-weight: 400px;
+  font-size: 15px;
+  ${space};
+  ${color};
+  ${typography}
+`;
+
+const Button = styled.button<Props>`
+  width: 100%;
+  background-color: rgb(241, 87, 31);
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+  ${space};
+  ${color};
+  ${typography};
+`;
+
+
+
+
 export const Text = {
   Primary,
   Body,
@@ -88,4 +112,6 @@ export const Text = {
   SmallHeading,
   Secondary,
   BodyLineThrough,
+  TextGray,
+  Button,
 };

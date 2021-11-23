@@ -1,4 +1,4 @@
-import { Text } from '../../atoms';
+import { Text } from '@src/atoms';
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../constants';
@@ -90,12 +90,16 @@ export const BlockBusterCard: React.FC<Props> = ({
       <SImage src={image} alt="block buster"></SImage>
 
       <STextWrapper>
-        <Text.Body>Rs.{discount}</Text.Body>
-        <SPrice>Rs.{price}</SPrice>
-        <SName>{name}</SName>
+        <Text.BodyLineThrough fontSize="10px">
+          Rs.{discount}
+        </Text.BodyLineThrough>
+        <Text.BodyBold fontSize="14px">Rs.{price}</Text.BodyBold>
+        <Text.BodyBold fontSize="16px" mt="8px">
+          {name}
+        </Text.BodyBold>
       </STextWrapper>
 
-      <SBtn>{btn_name}</SBtn>
+      <Text.Button p="16px">{btn_name}</Text.Button>
     </SWrapper>
   );
 };

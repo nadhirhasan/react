@@ -1,17 +1,25 @@
 import styled from 'styled-components';
 import { BlockBusterCard } from '../../molecules';
 import { theme } from '../../constants';
+import { Text } from '@src/atoms';
+
+
+const SWrapper = styled.div`
+  
+`
 
 const SBlockWrapper = styled.section`
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 36px;
+  grid-gap: 24px;
+  
 `;
 
 const SH1 = styled.div`
   margin-left: 0px;
   font-size: 38px;
   font-weight: 700;
+
 `;
 
 const SLighGrayText = styled.div`
@@ -98,7 +106,9 @@ export const MiniBlockBuster = () => {
   return (
     <div>
       <SH1>Electronics</SH1>
-      <SLighGrayText>24 products</SLighGrayText>
+      <Text.TextGray>24 products</Text.TextGray>
+      <SWrapper>
+        
       <SBlockWrapper>
         {Categories.map(({ offer, discount, image, price, name, btn_name }) => (
           <BlockBusterCard
@@ -111,6 +121,7 @@ export const MiniBlockBuster = () => {
           />
         ))}
       </SBlockWrapper>
+      </SWrapper>
     </div>
   );
 };
