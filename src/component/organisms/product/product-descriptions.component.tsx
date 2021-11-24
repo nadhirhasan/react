@@ -1,8 +1,8 @@
-import { Text } from '@src/atoms';
+import { Text } from '@src/component/atoms';
 import React from 'react';
 import styled from 'styled-components';
 import { space, SpaceProps } from 'styled-system';
-import { theme } from '../../constants';
+import { theme } from '@src/constants';
 import { ProductDescriptionItem } from './product-description-item.component';
 
 const SWrapper = styled.div<SpaceProps>`

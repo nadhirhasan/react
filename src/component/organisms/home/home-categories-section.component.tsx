@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { CategoryCard } from '../../molecules/category-card/category-card.component';
-import { theme } from '../../constants';
-import { v4 } from 'uuid';
+import { CategoryCard } from '@src/molecules';
+import { theme } from '@src/constants';
 
 const SCategoryWrapper = styled.div`
   display: grid;

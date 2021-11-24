@@ -1,7 +1,9 @@
-import { ProductImageCarousal } from '../../molecules/product-image-carousal';
+import { ProductImageCarousal } from '@src/molecules';
 import styled from 'styled-components';
-import { Navbar } from '../../molecules/navbar/navbar.component';
-import { ProductDescriptions, ProductDetailContent } from '@src/organisms';
+import {
+  ProductDescriptions,
+  ProductDetailContent,
+} from '@src/component/organisms';
 
 const SWrapper = styled.div`
   display: flex;

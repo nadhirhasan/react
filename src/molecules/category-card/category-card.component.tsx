@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
 import styled from 'styled-components';
-import { theme } from '../../constants';
-import { ReactComponent as RightChevron } from '../../assets/icons/right-chevron-orange.icon.svg';
-import { Text } from '../../atoms';
+import { theme } from '@src/constants';
+import { ReactComponent as RightChevron } from '@src/assets/icons/right-chevron-orange.icon.svg';
+import { Text } from '../../component/atoms';
 import { useNavigate } from 'react-router';
 
 const Swrapper = styled.div`

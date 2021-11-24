@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { theme } from '../../constants';
-import { ReactComponent as RightChevron } from '../../assets/icons/right-chevron-orange-mini.icon.svg';
-import { ReactComponent as LefttChevron } from '../../assets/icons/left-chevron-orange-mini.icon.svg';
-import { ReactComponent as SelectionIcon } from '../../assets/icons/selection-buttons.icon.svg';
+import { theme } from '@src/constants';
+import { ReactComponent as RightChevron } from '@src/assets/icons/right-chevron-orange-mini.icon.svg';
+import { ReactComponent as LefttChevron } from '@src/assets/icons/left-chevron-orange-mini.icon.svg';
+import { ReactComponent as SelectionIcon } from '@src/assets/icons/selection-buttons.icon.svg';
 
 const SWrapper = styled.div`
   width: 526px;

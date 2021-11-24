@@ -1,6 +1,6 @@
-import { Text } from '@src/atoms';
+import { Text } from '@src/component/atoms';
 import styled from 'styled-components';
-import { theme } from '../../constants';
+import { theme } from '@src/constants';
 
 const SWrapper = styled.div`
   width: 350px;

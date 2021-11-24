@@ -1,7 +1,7 @@
-import { Button, Text } from '@src/atoms';
+import { Button, Text } from '@src/component/atoms';
 import React, { useCallback } from 'react';
 import styled from 'styled-components';
-import { theme } from '../../constants';
+import { theme } from '@src/constants';
 import { useNavigate } from 'react-router-dom';
 
 const SWrapper = styled.div`

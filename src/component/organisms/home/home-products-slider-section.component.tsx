@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ProductCard } from '../../molecules';
-import { theme } from '../../constants';
+import { ProductCard } from '@src/molecules';
+import { theme } from '@src/constants';
 
 const SBlockWrapper = styled.section`
   display: grid;
@@ -14,6 +14,7 @@ const SH1 = styled.h1`
 
 const categories = [
   {
+    id: '11',
     offer: 10,
     discount: 10500,
     image: theme.ovenImage,

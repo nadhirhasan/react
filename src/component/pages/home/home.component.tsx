@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { HomeProductsSlider } from '../../organisms';
-import { HomeCategoriesSection } from '../../organisms/home/home-categories-section.component';
+import { HomeProductsSlider } from '@src/component/organisms';
+import { HomeCategoriesSection } from '@src/component/organisms';
 const SWrapper = styled.div`
   display: flex;
   flex-direction: column;

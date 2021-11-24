@@ -5,8 +5,8 @@ import {
 } from 'react-router-dom';
 import styled from 'styled-components';
 import { Navbar } from './molecules';
-import { ProductList, ProductDetails } from './pages';
-import { Home } from './pages';
+import { ProductList, ProductDetails } from './component/pages';
+import { Home } from './component/pages';
 
 const SContent = styled.div`
   margin-top: 108px;

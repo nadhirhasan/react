@@ -3,3 +3,4 @@ export * from './product-card';
 export * from './navbar';
 export * from './product-card';
 export * from './categories-sidebar';
+export * from './product-image-carousal';

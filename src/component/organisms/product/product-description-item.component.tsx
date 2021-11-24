@@ -1,4 +1,4 @@
-import { Text } from '@src/atoms';
+import { Text } from '@src/component/atoms';
 import { theme } from '@src/constants';
 import React from 'react';
 import styled from 'styled-components';

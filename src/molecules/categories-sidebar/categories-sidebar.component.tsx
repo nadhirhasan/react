@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { theme } from '../../constants';
-import { Text } from '@src/atoms';
-import { useLocation, useNavigate, useParams } from 'react-router';
-import { categories } from '@src/organisms';
-import { useCallback, useEffect, useState } from 'react';
+import { theme } from '@src/constants';
+import { Text } from '@src/component/atoms';
+import { useNavigate, useParams } from 'react-router';
+import { categories } from '@src/component/organisms';
+import { useCallback } from 'react';
 
 const SWrapper = styled.div`
   width: 275px;

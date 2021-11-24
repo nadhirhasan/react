@@ -1,6 +1,6 @@
 import searchIcon from './search_icon.png';
 import styled from 'styled-components';
-import { Text } from '../../atoms/';
+import { Text } from '../../component/atoms';
 import { theme } from '@src/constants';
 
 const SWrapper = styled.header`
